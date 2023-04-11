@@ -14,7 +14,7 @@ class WaterController < ApplicationController
     render({ :template => "aqua/cancer.html.erb" })
   end
 
-  def scorpion
+  def scorpio
     @horoscope = "All continues to go well professionally, Scorpio. You're feeling physically strong and vigorous. Mentally, however, you might be a bit vague. You may be easily distracted and not as sharp as usual. This isn't a good day to start a new project. Try to concentrate on finishing old tasks and tying up loose ends. You should be ready to go again in a couple of days."
 
     @array_of_numbers = Array.new
@@ -25,7 +25,7 @@ class WaterController < ApplicationController
       @array_of_numbers.push(another_number)
     end
     
-    render({ :template => "aqua_views/scorpio.html.erb" })
+    render({ :template => "aqua/scorpio.html.erb" })
   end
 
   def fish
@@ -40,6 +40,6 @@ class WaterController < ApplicationController
       @array_of_numbers.push(another_number)
     end
     
-    render({ :template => "aqua_views/pisces.html.erb" })
+    render({ :template => "aqua/pisces.html.erb" })
   end
 end
