@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   # PART 1: EACH IN ERB
   # ===================
 
-  get("/lottery/lucky", { :controller => "numbers", :action => "winners" })
+  get("/lottery/lucky", { :controller => "numbers", :action => "winners" }) # "numbers" goes to controllers folder and looks for a filed that STARTS with "numbers" and finds it.
   get("/", { :controller => "numbers", :action => "winners" })
+
+  get("/lottery/unlucky", { :controller => "numbers", :action => "losers"})
 
   # Let users visit URLs:
 
@@ -15,7 +17,7 @@ Rails.application.routes.draw do
   # Uncomment each route below ONE AT A TIME and debug.
   # Do NOT uncomment more than one at a time, or you'll be dealing with multiple syntax errors at once.
 
-  # get("/zodiacs/aries", { :controller =>  fire, action =>  "ram" })
+  get("/zodiacs/aries", { :controller =>  "fire", :action =>  "ram" })
   # get("/zodiacs/leo", { :controller => "fire", :action => "lion" })
   # get("/zodiacs/sagittarius" { :controller => "fire", :action => "archer" })
   
